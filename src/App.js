@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import { Trans, useTranslation } from "react-i18next";
+import { LocalizedText } from "./localization/LocalizedText";
 
 const lngs = {
   en: { nativeName: "English" },
@@ -31,6 +32,9 @@ function App() {
         <p>{t("sayHello")}</p>
         <p>
           <Trans t={t}>sayHello</Trans>
+        </p>
+        <p>
+          <LocalizedText>sayHello</LocalizedText>
         </p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
